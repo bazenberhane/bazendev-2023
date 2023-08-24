@@ -7,6 +7,7 @@ import Image from 'next/image'
 import MainNav from './main-nav'
 import MobileNav from './mobile-nav'
 import NavLink from './nav-link'
+import Link from 'next/link'
 
 const routes = [
   {
@@ -37,15 +38,17 @@ export default function Navbar() {
     <LazyMotion features={domAnimation}>
       <div className='w-full fixed z-[99] border-b hidden lg:block overflow-hidden bg-white'>
         <div className='flex h-16 items-center pl-4'>
-          <span className='w-[200px]'>
-            <Image
-              src='/images/funky-logo.png'
-              alt='logo'
-              className='object-contain'
-              width={100}
-              height={100}
-            />
-          </span>
+          <Link href='/'>
+            <span className='w-[200px]'>
+              <Image
+                src='/images/funky-logo.png'
+                alt='logo'
+                className='object-contain'
+                width={100}
+                height={100}
+              />
+            </span>
+          </Link>
           <MainNav routes={routes} />
 
           <div className='ml-auto bg-blue text-white h-full w-[250px] tracking-tight flex items-center justify-center'>

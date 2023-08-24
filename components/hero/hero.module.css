@@ -1,0 +1,22 @@
+.hero {
+  @apply relative flex h-screen overflow-hidden;
+}
+
+.marqueeContainer {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
+.marquee {
+  @apply relative whitespace-nowrap;
+}
+
+.marqueeText {
+  @apply w-full relative m-0 text-blue text-[19vw] pr-[50px];
+}
+.marqueeTextTwo {
+  @apply absolute left-full top-0 w-full  m-0 text-blue text-[19vw] pr-[50px];
+}
+
+.desc {
+  @apply absolute bottom-[15%] left-[5%] text-blue text-2xl;
+}
